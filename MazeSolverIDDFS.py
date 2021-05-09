@@ -30,5 +30,5 @@ class MazeSolverIDDFS():
                     if node not in visited:
                         visited.add(node); fringe.append((depth + 1, node))
                         came_from[node] = current
-        if found: print("IDDFS total time run ",datetime.now()-self.startT); return came_from, visited
+        if found: print("IDDFS total time run ",datetime.now()-self.startT," total expanded cells:",len(visited)); return came_from, visited
         else: return None, visited

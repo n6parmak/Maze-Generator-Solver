@@ -51,7 +51,7 @@ class MazeSolverAStar():
                     current = cameFrom[current]
                     path.append(current)
                 path.reverse()
-                print ("A* total time run ",datetime.now()-startT)
+                print ("A* total time run ",datetime.now()-startT," total expanded cells: ",len(path))
                 return path, F[end]
 
             openVertices.remove(current)
