@@ -4,12 +4,16 @@ from MazeSolverUCS import MazeSolverUCS
 from MazeSolverAStar import MazeSolverAStar
 from MazeSolverIDDFS import MazeSolverIDDFS
 
-SIZE = 96
+SIZE = 10
 maze = Maze(SIZE)
 maze.createMaze()
-MazeSolverAStar(maze, 0).aStar() #Manhattan
-MazeSolverAStar(maze, 1).aStar() #Euclidian
-MazeSolverIDDFS(maze).IDDFS(100) #Iterative deepening search
-MazeSolverUCS(maze).UCS()        #Uniform cost search
-Visualize(maze).visualizeMaze()   
+pathma = MazeSolverAStar(maze, 0).aStar() #Manhattan
+pathea = MazeSolverAStar(maze, 1).aStar() #Euclidian
+pathucs = MazeSolverUCS(maze).UCS()        #Uniform cost search
+pathi = MazeSolverIDDFS(maze).IDDFS()    #Iterative deepening search 
+Visualize(maze, None).visualizeMaze()
+Visualize(maze,pathma).visualizeMaze()   
+Visualize(maze,pathea).visualizeMaze() 
+Visualize(maze, pathucs).visualizeMaze()
+Visualize(maze, pathi).visualizeIDDFS()
 

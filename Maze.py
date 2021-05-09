@@ -46,5 +46,5 @@ class Maze:
             stack.append(current)
             current = nextCell
             totalVisited += 1
-        self.getCell(self.size-1, 0).walls["T"]=False
-        self.getCell(0, self.size-1).walls["B"]=False    
+        self.getCell(0, 0).walls["T"]=False
+        self.getCell(self.size-1, self.size-1).walls["B"]=False    
