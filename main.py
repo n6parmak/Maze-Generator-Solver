@@ -4,7 +4,7 @@ from MazeSolverUCS import MazeSolverUCS
 from MazeSolverAStar import MazeSolverAStar
 from MazeSolverIDDFS import MazeSolverIDDFS
 
-SIZE = 10
+SIZE = 100
 maze = Maze(SIZE)
 maze.createMaze()
 pathma,op = MazeSolverAStar(maze, 0).aStar()  #Manhattan

@@ -52,7 +52,7 @@ class MazeSolverAStar():
                     path.append(current)
                 path.reverse()
                 self.maze.optimum = len(path)
-                print ("A* total time run ",datetime.now()-startT," total expanded path ",len(cameFrom)," optimum path lenght: ",self.maze.optimum)
+                print ("A* total time run ",datetime.now()-startT," total expanded path ",len(cameFrom)+1," optimum path lenght: ",self.maze.optimum)
                 return cameFrom, path
 
             openVertices.remove(current)

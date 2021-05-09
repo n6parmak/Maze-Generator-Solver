@@ -29,8 +29,9 @@ class Visualize():
                     plt.plot(j.x+0.5,j.y+0.5, "-r", marker ="x")            
         title =  self.title      
         plt.title(self.title)        
-        plt.plot(0.5,0.5, "-r", marker ="x")                        
+        #plt.plot(0.5,0.5, "-r", marker ="x")                        
         plt.savefig("mazes/{}_{}.png".format(self.title,self.maze.size), format='png')  
+        plt.close("all")
       
 
     def visualizeIDDFS(self):
@@ -53,7 +54,8 @@ class Visualize():
         title =  self.title      
         plt.title(self.title)        
         plt.plot(0.5,0.5, "-r", marker ="x")                        
-        plt.savefig("mazes/{}_{}.png".format(self.title,self.maze.size), format='png')   
+        plt.savefig("mazes/{}_{}.png".format(self.title,self.maze.size), format='png') 
+        plt.close("all")  
         
     def visualizeMazeAStar(self):
         maze=self.maze
@@ -75,4 +77,5 @@ class Visualize():
                 plt.plot(i.x+0.5,i.y+0.5, "-r", marker ="x")  
         plt.title(self.title)        
         plt.plot(0.5,0.5, "-r", marker ="x")                        
-        plt.savefig("mazes/{}_{}.png".format(self.title,self.maze.size), format='png')    
+        plt.savefig("mazes/{}_{}.png".format(self.title,self.maze.size), format='png')  
+        plt.close("all")
