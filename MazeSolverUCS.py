@@ -21,7 +21,7 @@ class MazeSolverUCS():
                 if node not in visited or cost_so_far[node] > new_cost:
                     visited.add(node); came_from[node] = current; cost_so_far[node] = new_cost
                     heappush(fringe, (new_cost, node))
-        if found: print("UCS total time run ",datetime.now()-startT," total expanded cells:",len(came_from)); return came_from, cost_so_far[goal]
+        if found: print("UCS total time run ",datetime.now()-startT," total expanded cells:",len(came_from)," optimum path lenght: ",self.maze.optimum); return came_from, cost_so_far[goal]
         else: print('No path from {} to {}'.format(start, goal)); return None, inf
             
 

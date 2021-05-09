@@ -4,6 +4,7 @@ class Maze:
     def __init__(self,size):
         self.size = size
         self.grid = [[Cell(x, y) for y in range(size)] for x in range(size)]
+        self.optimum = 0
 
     def getCell(self, x, y):
         return self.grid[x][y]
